@@ -20,7 +20,7 @@ int main()
     auto last = numbers.end();
 
     std::iota(first, last, 0);
-    std::for_each(first, numbers.end(), [](int n)
+    std::for_each(first, last, [](int n)
                   { std::cout << n << " "; });
 
     std::cout << std::endl;

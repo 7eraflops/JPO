@@ -43,6 +43,7 @@ int main()
     cout << "The generated random Matrix: " << endl;
     print_matrix(&matrix);
     cout << endl;
+
     for (size_t i = 0; i < rows; i++)
     {
         for (size_t j = 0; j < columns; j++)
@@ -58,9 +59,10 @@ int main()
             }
         }
     }
+
     cout << "The sum of the matrix entries either in even columns or odd rows is: " << sum << endl
-         << endl;
-    cout << "For reference, these entries are being summed: " << endl;
+         << endl
+         << "For reference, these entries are being summed: " << endl;
     print_matrix(&matrix);
 
     return 0;

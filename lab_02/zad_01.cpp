@@ -51,11 +51,11 @@ int main()
             if (i % 2 != 0 || j % 2 == 0)
             {
                 sum += matrix[i][j];
-                matrix[i][j] = 1;
+                matrix[i][j] = 1; // changing values to show which entries are being summed
             }
             else
             {
-                matrix[i][j] = 0;
+                matrix[i][j] = 0; // see line 54
             }
         }
     }

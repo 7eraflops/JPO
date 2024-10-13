@@ -10,24 +10,13 @@ using std::string;
 
 int main()
 {
-    string input_string{};
+    string user_input{};
     cout << "Enter a string: ";
-    cin >> input_string;
-    string input_string_copy(input_string);
+    cin >> user_input;
 
     // method 1
-    reverse(input_string.begin(), input_string.end());
-    cout << "The input string reversed using std::reverse: " << input_string << endl
+    reverse(user_input.begin(), user_input.end());
+    cout << "The input string reversed using std::reverse: " << user_input << endl
          << endl;
-
-    // method 2
-    size_t n = input_string_copy.size();
-    for (size_t i = 0; i < n / 2; i++)
-    {
-        char temp = input_string_copy[i];
-        input_string_copy[i] = input_string_copy[n - i - 1];
-        input_string_copy[n - i - 1] = temp;
-    }
-    cout << "The input string reversed \"manually\": " << input_string_copy << endl
-         << endl;
+    return 0;
 }

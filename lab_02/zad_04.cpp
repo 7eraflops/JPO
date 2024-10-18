@@ -6,7 +6,6 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
-using std::tolower;
 
 int main()
 {
@@ -19,7 +18,7 @@ int main()
     cout << "Input a character to count (case-insensitive): ";
     cin >> char_to_check;
 
-    char_to_check = tolower(char_to_check);
+    char_to_check = std::tolower(char_to_check);
 
     int count = 0;
     for (char c : sentence)

@@ -19,6 +19,20 @@ void print_matrix(vector<vector<int>>* matrix)
     }
 }
 
+void sum_elements(vector<vector<int>>* matrix, int* sum)
+{
+    for (size_t i = 0; i < matrix->size(); i++)
+    {
+        for (size_t j = 0; j < (*matrix)[0].size(); j++)
+        {
+            if (i % 2 != 0 || j % 2 == 0)
+            {
+                *sum += (*matrix)[i][j];
+            }
+        }
+    }
+}
+
 int main()
 {
     size_t rows{}, columns{};
@@ -44,18 +58,19 @@ int main()
     print_matrix(&matrix);
     cout << endl;
 
+    sum_elements(&matrix, &sum);
+
     for (size_t i = 0; i < rows; i++)
     {
         for (size_t j = 0; j < columns; j++)
         {
             if (i % 2 != 0 || j % 2 == 0)
             {
-                sum += matrix[i][j];
-                matrix[i][j] = 1; // changing values to show which entries are being summed
+                matrix[i][j] = 1;  // changing values to show which entries are being summed
             }
             else
             {
-                matrix[i][j] = 0; // see line 54
+                matrix[i][j] = 0;  // see line 54
             }
         }
     }

@@ -5,6 +5,6 @@
 class Square : public Rectangle
 {
    public:
-    // parametrized constructor
+    // Parametrized constructor
     Square(double a, const Point &p);
 };

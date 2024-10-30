@@ -9,11 +9,11 @@ class Rectangle : public Figure
     double m_b;
 
    protected:
-    // parametrized constructor (why this one is protected?) -> because the class square inherits from Rectangle
+    // Parametrized constructor (why is this one protected?) -> because the class Square inherits from Rectangle
     Rectangle(double a, double b, const Point &p, std::string name);
 
    public:
-    // parametrized constructor
+    // Parametrized constructor
     Rectangle(double a, double b, const Point &p);
 
     // Member functions

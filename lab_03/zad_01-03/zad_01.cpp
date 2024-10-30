@@ -7,7 +7,6 @@ class Student
     std::string name;
     int age;
 
-    // default constructor
     Student()
     {
         name = "unknown";
@@ -15,11 +14,7 @@ class Student
         m_faculty = "what?";
     }
 
-    // parameterized constructor
-    Student(std::string n, int a, std::string f) : name(n), age(a), m_faculty(f)
-    {
-        // body of a constructor
-    }
+    Student(std::string n, int a, std::string f) : name(n), age(a), m_faculty(f){}
 
     void introduce(void) const
     {
@@ -34,15 +29,15 @@ class Student
 
 int main()
 {
-    Student student1;  // default constructor
+    Student student1;
     student1.name = "Jakub";
     student1.age = 25;
     student1.introduce();
 
-    Student student2("Maciej", 22, "EiT");  // parameterized constructor
+    Student student2("Maciej", 22, "EiT");
     student2.introduce();
 
-    Student student3(student2);  // implicit copy constructor
+    Student student3(student2);
     student3.introduce();
 
     return 0;

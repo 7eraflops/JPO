@@ -23,11 +23,23 @@ int main()
 
     cout << "Enter the circle's center coordinates: " << endl;
     cin >> center_x >> center_y;
-    cout << "Enter the circle's radius: " << endl;
-    cin >> radius;
 
     circle.set_center(center_x, center_y);
-    circle.set_radius(radius);
+    
+    while (true)
+    {
+        try
+        {
+            cout << "Enter the circle's radius: ";
+            cin >> radius;
+            circle.set_radius(radius);
+            break;
+        }
+        catch (const std::invalid_argument& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+    }
 
     cout << "The circle's new center coordinates are: (" << circle.get_center().get_x() << ", " << circle.get_center().get_y() << ")" << endl;
 

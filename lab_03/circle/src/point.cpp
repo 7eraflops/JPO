@@ -2,29 +2,29 @@
 
 #include <iostream>
 
-Point::Point(double x_val, double y_val) : x(x_val), y(y_val) {}
+Point::Point(double x_val, double y_val) : m_x(x_val), m_y(y_val) {}
 
 double Point::get_x() const
 {
-    return x;
+    return m_x;
 }
 
 double Point::get_y() const
 {
-    return y;
+    return m_y;
 }
 
 void Point::set_x(double x_val)
 {
-    x = x_val;
+    m_x = x_val;
 }
 
 void Point::set_y(double y_val)
 {
-    y = y_val;
+    m_y = y_val;
 }
 
 void Point::display() const
 {
-    std::cout << "The point's coordinates are: (" << x << ", " << y << ")" << std::endl;
+    std::cout << "The point's coordinates are: (" << m_x << ", " << m_y << ")" << std::endl;
 }

@@ -4,8 +4,8 @@
 class Point
 {
    private:
-    double x;
-    double y;
+    double m_x;
+    double m_y;
 
    public:
     Point(double x_val, double y_val);

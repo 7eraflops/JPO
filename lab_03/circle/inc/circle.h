@@ -6,11 +6,12 @@
 class Circle
 {
    private:
-    double* radius;
-    Point center;
+    double* m_radius;
+    Point m_center;
 
    public:
     Circle(double r, Point c);
+    Circle(double r, double x, double y);
     ~Circle();
 
     double get_radius() const;

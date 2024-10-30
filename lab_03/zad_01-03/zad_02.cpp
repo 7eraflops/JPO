@@ -9,7 +9,7 @@ class Student
     int m_age;
 
    public:
-    void setAge(int a)
+    void setAge(const int& a)
     {
         if (a < 0)
         {
